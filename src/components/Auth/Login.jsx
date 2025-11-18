@@ -1,16 +1,17 @@
 import React from "react";
 
-const Login = () => {
+const Login = ({handleLongin}) => {
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
 
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log(email, password);
+    handleLongin(email, password);
 
     setEmail("");
     setPassword("");
   };
+
 
   return (
     <div className="flex h-screen w-screen items-center justify-center">
